@@ -1,12 +1,15 @@
-# My code jam solutions
+# Competitive Programming Questions Pool
 
 ## Contents
 ### ICPC
-|OJ id|C++|Notes|
+|OJ id|C++ 11|Notes|
 |--|--|--|
+|[Uva 10114](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1055)|[uva10114.cpp](ICPC/uva10114.cpp)||
+|[Uva 11547](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2542)|[uva11547.cpp](ICPC/uva11547.cpp)||
 |[UVa 11498](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2493)|[uva11498.cpp](ICPC/uva11498.cpp)||
 
 ### Kickstart 2018
-- Kickstart Practice Round 2018
-    - [Problem A. GBus count](2018_Kickstart/practice_a.cpp)
-    - [Problem B. Googol String](2018_Kickstart/practice_b.cpp)
+|Problem|C++ 11|Notes|
+|--|--|--|
+|[Practice Round Problem A](https://code.google.com/codejam/contest/4374486/dashboard#s=p0)|[practice_a.cpp](2018_Kickstart/practice_a.cpp)||
+|[Practice Round Problem B](https://code.google.com/codejam/contest/4374486/dashboard#s=p1)|[practice_b.cpp](2018_Kickstart/practice_b.cpp)||

@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 void division(const int &N, const int &M, const int &X, const int &Y) {
     if (X > N && Y > M) {
         cout << "NE" << endl;
