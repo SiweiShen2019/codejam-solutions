@@ -31,5 +31,6 @@
 *.out
 *.app
 
-# For standard input
+# For standard input and output
 *.in
+*.out
