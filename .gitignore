@@ -34,3 +34,9 @@
 # For standard input and output
 *.in
 *.out
+
+# Some source files
+/src
+
+# temporary files
+tmp.*
