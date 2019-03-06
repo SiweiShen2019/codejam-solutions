@@ -3,7 +3,7 @@
 ## Contents
 ### Notes
 - [Basics](Notes/Basics.md)
-- [Data Structures](Notes/Basics.md)
+- [Data Structures](Notes/DataStructures.md)
 
 ## Reference
 ### Books and other materials

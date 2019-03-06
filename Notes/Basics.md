@@ -61,12 +61,12 @@ while (scanf("%d", &k) != EOF) {
 }
 ```
 
-### Practice
-#### Super Easy
+## Practice
+### Super Easy
 - [UVa 11172 - Relational Operators](../ACM/uva11172.cpp) (ad hoc, very easy, one liner)
 - [UVa 11498 - Division of Nlogonia](../ACM/uva11498.cpp) (just use if-else statements)
 - [UVa 11727 - Cost Cutting](../ACM/uva11727.cpp) (sort the 3 numbers and get the median)
-#### Easy
+### Easy
 - [UVa 10114 - Loansome Car Buyer](../ACM/uva10114.cpp) (just simulate the process)
   - Understand the question.
   - Use of `unordered_map`.

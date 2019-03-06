@@ -69,3 +69,5 @@
 and the end of the deque.
 - C++ STL `deque`: `push back()`, `pop front()` (just like the normal queue), `push_front()` and `pop_back()` (specific for deque).
 
+## Practice
+- [Kattis - cups](../ACM/cups.cpp) (a bit of string parsing; sort)
