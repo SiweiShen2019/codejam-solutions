@@ -1,31 +1,30 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -g
+CXXFLAGS = -std=c++11 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -g -O2
 
-
-# Build an executable file named by argument "id" and remove .o file
-all: print.o
-ifeq ($(id), )
-	@echo Usage "make id=[OJ id]".
+# Build an executable file named by argument "file" and remove .o file
+all: $(file).o
+ifeq ($(file), )
+	@echo Usage "make file=[file name]".
 else
-	@make -s $(id).o
-	@$(CXX) $(CXXFLAGS) $(id).o print.o -o $(id)
-	@rm $(id).o  # no need to remove print.o locally
+	@make -s $(file).o
+	@$(CXX) $(CXXFLAGS) $(file).o -o $(file)
+	@rm $(file).o  # no need to remove locally
 endif
 
 # Compile .o file
-$(id).o: $(id).cpp
-	@$(CXX) $(CXXFLAGS) -c $(id).cpp
-
-print.o: print.cpp
-	@$(CXX) $(CXXFLAGS) -c print.cpp
+$(file).o: $(file).cpp
+	@$(CXX) $(CXXFLAGS) -c $(file).cpp
 
 # Run .cpp files like python scripts
 # Compile, build, and run a .cpp file and remove the executable file. 
 .PHONY: run
 run: all
-	@./$(id)
-	@rm $(id)
+	@echo Finish compiling.
+	@echo =================
+	@./$(file)
+	@rm $(file)
 
 .PHONY: clean
 clean:
-	@rm *.o
+	@rm -f *.o
+	@find . -maxdepth 1 -type f -executable -delete
