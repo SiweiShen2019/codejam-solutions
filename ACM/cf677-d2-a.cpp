@@ -1,17 +1,16 @@
 #include <iostream>
-using namespace std;
 
-int n, h, p, res{0};
 
 int main()
 {
-    cin >> n >> h;
+    int n, h, p, res{0};
+    std::cin >> n >> h;
     while (n--) {
-        cin >> p;
+        std::cin >> p;
         if (p > h)
             ++res;
         ++res;
     }
-    cout << res << endl;
+    std::cout << res << std::endl;
     return 0;
 }
