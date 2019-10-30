@@ -27,4 +27,5 @@ run: all
 .PHONY: clean
 clean:
 	@rm -f *.o
-	@find . -maxdepth 1 -type f -executable -delete
+	# MacOS: find and delete all executable files.
+	@find . -perm +111 -type f -delete
