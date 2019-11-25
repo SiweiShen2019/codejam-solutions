@@ -1,0 +1,112 @@
+* Standard Input and Output
+** =#include <iostream>=
+*** Input
+**** =cin >> a >> b=
+**** =cin.getline(char_array, 10)=
+**** =getline(cin, str)=
+*** Output
+**** =cout << str << endl=
+** =#include <stdio.h>=
+*** Input
+**** =scanf("%d", &n)=
+*** Output
+**** =printf("%d\n", a)=
+
+* Data Types
+** Integers
+*** long
+**** range: 10^9
+**** scanf & printf: ="%ld"=
+*** long long
+**** used for munipulating long in case overflow
+**** scaf & printf: ="%lld"=
+*** size_t
+**** scanf & printf: ="%ld"=
+** Conversion
+*** char digit to int: =(int)char - 48=
+*** int to char (ascii)
+**** A-Z: 65-90
+**** a-z: 97-122
+** Check
+   #+begin_src cpp
+     #include <ctype.h>
+
+     isalpha(a);
+     isalnum(b);
+     isdigit(c);
+     islower(d);
+     isupper(e);
+   #+end_src
+
+* Data Strcutures
+** Native Array
+   #+begin_src cpp
+     int a[3];
+     int b[] = {1, 2, 3};
+     int* p = b; // point to 1
+     ++p; // point to 2
+     *p = 4; // b[] = {1, 4, 3}
+   #+end_src
+   
+*** Some useful facts:
+**** scanf into an array: =scanf("%d", &a[i])=
+
+** Vector
+   #+begin_src cpp
+     #include <vector>
+
+     vector<int> v;
+     vector<int> w (5, 0); // 5 zeros
+     v.push_back(1); // append 1 to the vector
+     v.pop_back(); // remove the last element in the vector
+   #+end_src
+
+** Set
+   #+begin_src cpp
+     #include <set>
+
+     set<int> initial;
+     set<int> copy (initial);
+
+     int a[] = {1, 2, 3, 4, 5};
+     set<int> range_copy (var, var + n);
+     set<int> iter_copy (range_copy.begin(), range_copy.end());
+   #+end_src
+   
+*** Member functions:
+**** if empty: =empty()=
+**** size: =size()=
+**** add: =insert()=
+**** remove: =erase()=
+***** remove by val =erase(val)=
+***** remove by iterator =erase(it)=
+***** remove by range =erase(it_first, it_last)=
+**** remove all: =clear()=
+**** find the value and return the iterator: =find()=
+***** return =end()= if not find
+
+** Map
+   #+begin_src cpp
+     #include <unordered_map>
+     typedef unordered_map<int, int> int_map;
+
+     int_map m; // empty
+     int_map init({{1: 10}, {2: 20}}); // init
+     int_map copy(init_m); // copy
+     int_map iter_copy(copy.begin(), copy.end());
+   #+end_src
+
+*** Member functions:
+**** if empty: =empty()=
+**** size: =size()=
+**** access: =[]= or =at()=
+***** the only difference is, at() throws out-of-range exception whereas operator[] shows undefined behavior.
+**** find: =find()= returns iterator, =end()= if not found
+**** check if key exists: =count() > 0= (actually =1=) if found, otherwise not found
+**** insert (key, value) pair: =insert()=
+**** remove: =erase()=
+
+* Bit Manipulation
+** Some interesting facts
+*** Are bit operations always faster?
+    Not necessary. Modern compiler will automatically translate some codes into bit operations.
