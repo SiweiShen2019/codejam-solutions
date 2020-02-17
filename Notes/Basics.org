@@ -1,32 +1,59 @@
 * Standard Input and Output
 ** =#include <iostream>=
 *** Input
-**** =cin >> a >> b=
-**** =cin.getline(char_array, 10)=
-**** =getline(cin, str)=
+    - =cin >> a >> b=
+    - =cin.getline(char_array, 10)=
+    - =getline(cin, str)=
 *** Output
-**** =cout << str << endl=
+    - =cout << str << endl=
 ** =#include <stdio.h>=
 *** Input
-**** =scanf("%d", &n)=
+    - =scanf("%d", &n)=
 *** Output
-**** =printf("%d\n", a)=
+    - =printf("%d\n", a)=
+** Input ending with =0=
+   #+begin_src cpp
+     while (scanf("%d %d", &a, &b), (a||b)) {
+       // more codes
+     }
+   #+end_src
+** Input ending with EOF
+   #+begin_src cpp
+     int a;
+     while (scanf("%d", &a) != EOF) {
+       // more codes
+     }
+
+     // or using iostream
+     string b;
+     while (cin >> b) {
+       // more codes
+     }
+   #+end_src
 
 * Data Types
 ** Integers
 *** long
-**** range: 10^9
-**** scanf & printf: ="%ld"=
+    - range: 10^9
+    - scanf & printf: ="%ld"=
 *** long long
-**** used for munipulating long in case overflow
-**** scaf & printf: ="%lld"=
+    - used for munipulating long in case overflow
+    - scaf & printf: ="%lld"=
 *** size_t
-**** scanf & printf: ="%ld"=
+    - scanf & printf: ="%ld"=
+*** modulus and integer division
+    #+begin_src cpp
+      int a = 143;
+      int b = a / 10; // 14
+      int c = a % 10; // 3
+      int d = 17;
+      int e = d / 8; // 2
+    #+end_src
 ** Conversion
-*** char digit to int: =(int)char - 48=
-*** int to char (ascii)
-**** A-Z: 65-90
-**** a-z: 97-122
+   - char digit to int: =(int)char - 48=
+   - int to char (ascii)
+     - A-Z: 65-90
+     - a-z: 97-122
 ** Check
    #+begin_src cpp
      #include <ctype.h>
@@ -49,7 +76,7 @@
    #+end_src
    
 *** Some useful facts:
-**** scanf into an array: =scanf("%d", &a[i])=
+    - scanf into an array: =scanf("%d", &a[i])=
 
 ** Vector
    #+begin_src cpp
@@ -74,16 +101,16 @@
    #+end_src
    
 *** Member functions:
-**** if empty: =empty()=
-**** size: =size()=
-**** add: =insert()=
-**** remove: =erase()=
-***** remove by val =erase(val)=
-***** remove by iterator =erase(it)=
-***** remove by range =erase(it_first, it_last)=
+    - if empty: =empty()=
+    - size: =size()=
+    - add: =insert()=
+    - remove: =erase()=
+      - remove by val =erase(val)=
+      - remove by iterator =erase(it)=
+      - remove by range =erase(it_first, it_last)=
 **** remove all: =clear()=
 **** find the value and return the iterator: =find()=
-***** return =end()= if not find
+     - return =end()= if not find
 
 ** Map
    #+begin_src cpp
@@ -95,18 +122,20 @@
      int_map copy(init_m); // copy
      int_map iter_copy(copy.begin(), copy.end());
    #+end_src
-
+   
 *** Member functions:
-**** if empty: =empty()=
-**** size: =size()=
-**** access: =[]= or =at()=
-***** the only difference is, at() throws out-of-range exception whereas operator[] shows undefined behavior.
-**** find: =find()= returns iterator, =end()= if not found
-**** check if key exists: =count() > 0= (actually =1=) if found, otherwise not found
-**** insert (key, value) pair: =insert()=
-**** remove: =erase()=
+    - if empty: =empty()=
+    - size: =size()=
+    - access: =[]= or =at()=
+      - the only difference is, at() throws out-of-range exception whereas operator[] shows undefined behavior.
+    - find: =find()= returns iterator, =end()= if not found
+    - check if key exists: =count() > 0= (actually =1=) if found, otherwise not found
+    - insert (key, value) pair: =insert()=
+    - remove: =erase()=
 
 * Bit Manipulation
+** Some tricks
+   - Odd/Even: =(n & 1)= -> odd, otherwise even
 ** Some interesting facts
-*** Are bit operations always faster?
-    Not necessary. Modern compiler will automatically translate some codes into bit operations.
+   - Are bit operations always faster?
+     Not necessary. Modern compiler will automatically translate some codes into bit operations.
