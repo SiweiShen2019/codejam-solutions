@@ -11,3 +11,7 @@
 | [Kattis - height](https://open.kattis.com/problems/height) | 2.2e, Sorting, Easier | insertion sort simulation | [height.cpp](height.cpp) |
 | [Kattis - mjehuric](https://open.kattis.com/problems/mjehuric) | 2.2e, Sorting, Easier | a direct simulation of a bubble sort algorithm | [mjehuric.cpp](mjehuric.cpp) |
 | [Kattis - sidewayssorting](https://open.kattis.com/problems/sidewayssorting) | 2.2e, Sorting, Easier | stable_sort or sort multi-fields of columns of a 2D array; ignore case | [sidewayssorting.cpp](sidewayssorting.cpp) |
+| [Kattis - evenup](https://open.kattis.com/problems/evenup) | 2.2i, Stack | use stack to solve this problem | [evenup.cpp](evenup.cpp) |
+| [Kattis - pairingsocks](https://open.kattis.com/problems/pairingsocks) | 2.2i, Stack | simulation using two stacks; just do as asked | [pairingsocks.cpp](pairingsocks.cpp) |
+| [Kattis - restaurant](https://open.kattis.com/problems/restaurant) | 2.2i, Stack | simulation with stack-based concept; drop plates at stack 2 (LIFO); use move 2->1 to reverse order; take from stack 1 (FIFO) | [restaurant.cpp](restaurant.cpp) |
+| [Kattis - throwns](https://open.kattis.com/problems/throwns) | 2.2i, Stack | use stack of egg positions to help with the undo operation; be careful of corner cases involving modulo operation | [throwns.cpp](throwns.cpp) |

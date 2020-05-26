@@ -1,5 +1,19 @@
 # Basics
+
 ## Standard Input/Output
+### `include <iostream>`
+- Input
+  - `cin >> a >> b`
+  - `cin.getline(char_array, 10)`
+  - `getline(cin, str)`
+- Output
+  - `cout << str << endl`
+
+### `include <stdio.h>`
+- Input
+  - `scanf("%d", &n)`
+- Output
+  - `printf("%d\n", a)`
 
 ### Multiple Test Cases
 - The number of test cases is given in the first line of the input.
@@ -61,16 +75,51 @@ while (scanf("%d", &k) != EOF) {
 }
 ```
 
-## Practice
-### Super Easy
-- [UVa 11172 - Relational Operators](../ACM/uva11172.cpp) (ad hoc, very easy, one liner)
-- [UVa 11498 - Division of Nlogonia](../ACM/uva11498.cpp) (just use if-else statements)
-- [UVa 11727 - Cost Cutting](../ACM/uva11727.cpp) (sort the 3 numbers and get the median)
-### Easy
-- [UVa 10114 - Loansome Car Buyer](../ACM/uva10114.cpp) (just simulate the process)
-  - Understand the question.
-  - Use of `unordered_map`.
-  - "0 months" vs "0 month".
-- [UVa 11559 - Event Planning](../ACM/uva11559.cpp) (one linear pass)
-  - Scan variable number of numbers in the same line.
-- [UVa 11799 - Horror Dash](../ACM/uva11799.cpp) (one linear scan to find the max value)
+## Data Types
+### Integers
+- `long`
+  - range: 10^9
+  - scanf & printf: `%ld`
+- `long long`
+  - used for manipulating `long` in case of overflow
+  - scanf & printf: `%lld`
+- `size_t`
+  - scanf & printf: `%ld`
+- modules and integer division
+  ```cpp
+  143 / 10 // 14
+  143 % 10 // 3
+  17 / 8 // 2
+
+  -7 / 3 // -2
+  -2 * 3 // -6
+  -7 % 3 // -1
+
+  7 / -3 // -2
+  -2 * -3 // 6
+  7 % -3 // 1
+
+  // to act a%b like Python
+  (b + (a%b)) % b
+  ```
+- Conversion
+  - char digit to digit: `(int)char - 48`
+  - int to char (ascii)
+    - A-Z: 65-90
+    - a-z: 97-122
+
+### Characters
+- Check
+  ```cpp
+  #include <ctype.h>
+
+  isalpha(a);
+  isalnum(b);
+  isdigit(c);
+  islower(d);
+  isupper(e);
+  ```
+
+### String
+- Conversion
+  - string to int (including negative values): `stoi(s)`
