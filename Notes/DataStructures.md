@@ -19,12 +19,15 @@ Some useful facts:
 #include <vector>
 
 vector<int> v;
-vector<int> w (5, 0); // 5 zeros
-v.push_back(1); // append 1 to the vector
-v.pop_back(); // remove the last element in the vector
+vector<int> w (3, 0); // 3 zeros: {0, 0, 0}
+w.push_back(1); // append 1 to the vector: {0, 0, 0, 1}
+w.size(); // 4
+w.pop_back(); // remove the last element in the vector: {0, 0, 0}
+w.size(); // 3
 ```
 
 ### Linked List
+In most competitive programming problems, use `vector` instead.
 
 ### Stack
 

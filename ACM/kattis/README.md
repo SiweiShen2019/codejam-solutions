@@ -15,3 +15,7 @@
 | [Kattis - pairingsocks](https://open.kattis.com/problems/pairingsocks) | 2.2i, Stack | simulation using two stacks; just do as asked | [pairingsocks.cpp](pairingsocks.cpp) |
 | [Kattis - restaurant](https://open.kattis.com/problems/restaurant) | 2.2i, Stack | simulation with stack-based concept; drop plates at stack 2 (LIFO); use move 2->1 to reverse order; take from stack 1 (FIFO) | [restaurant.cpp](restaurant.cpp) |
 | [Kattis - throwns](https://open.kattis.com/problems/throwns) | 2.2i, Stack | use stack of egg positions to help with the undo operation; be careful of corner cases involving modulo operation | [throwns.cpp](throwns.cpp) |
+| [Kattis - coconut](https://open.kattis.com/problems/coconut) | 2.2j, List/Queue/Deque | maintain a circular linked list of hand symbols; variant of Josephus problem; other solution exists | [coconut.cpp](coconut.cpp) |
+| [Kattis - integerlists](https://open.kattis.com/problems/integerlists) | 2.2j, List/Queue/Deque | use deque for fast deletion from front (normal) & back (reversed list); use stack to reverse the final list if it is reversed at the end | |
+| [Kattis - joinstrings](https://open.kattis.com/problems/joinstrings) | 2.2j, List/Queue/Deque | all '+' operations must be O(1) | |
+| [Kattis - teque](https://open.kattis.com/problems/teque) | 2.2j, List/Queue/Deque | all operations must be O(1) | |
