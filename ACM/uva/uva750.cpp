@@ -3,6 +3,7 @@ using namespace std;
 
 int n, a, b, lc, row[8];
 
+/* heuristic function to check if a position is valid */
 bool can_place(int r, int c) {
     for (int p=0; p<c; p++) { // check all previous columns
         if (row[p] == r || (abs(p-c) == abs(row[p]-r)))
